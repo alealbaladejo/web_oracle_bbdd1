@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{%block title %} {{titulo}}  {%endblock%}
+{% block content%}
+    <h2 class="text-white mb-4">INICIAR SESIÓN</h2>
+    <form action="{{ url_for('login') }}" method="POST">
+        <input class="form-control" type="text" name="usuario" placeholder="Usuario" required>
+        <input class="form-control" type="password" name="password" placeholder="Contraseña" required>
+        
+        <div class="form-group">
+            <input class="btn btn-light w-100 py-2" type="submit" value="Entrar" class="submit-btn">
+        </div>
+    </form>
+    {% if error %}
+        <div style="color: rgb(216, 129, 71);">
+            {{ error }}
+        </div>
+    {% endif %}
+
+{% endblock %}

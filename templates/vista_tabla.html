@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block title %} {{ titulo }} {% endblock %}
+
+{% block content %}
+    <header>
+        <h1>{{ titulo }}</h1>
+        <nav>
+            <a href="{{ url_for('tablas') }}">Volver a la lista de tablas</a>  
+        </nav>
+    </header>
+    
+
+        {% if registros %}
+            <table>
+                <thead>
+                    <tr>
+                        {% for columna in columnas %}
+                            <th>{{ columna }}</th>  
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for registro in registros %}
+                        <tr>
+                            {% for valor in registro %}
+                                <td>{{ valor }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No hay datos para mostrar en esta tabla.</p> 
+        {% endif %}
+
+{% endblock %}
