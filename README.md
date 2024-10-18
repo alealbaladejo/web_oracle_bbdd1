@@ -1,4 +1,3 @@
-# ALEJANDRO ALBALADEJO GAGO
-**Esto es una aplicación para la práctica 1 de ABD**
-
+# Aplicación Web usando Flask conectando a base de datos Oracle
+**Hecha por Alejandro Albaladejo Gago**
 ![ORACLE](/static/img/bbdd.jpg)
